@@ -1,0 +1,36 @@
+<ges version='0.7'>
+  <project properties='properties;' metadatas='metadatas, author=(string)&quot;James\ Henstridge&quot;, scaled_proxy_width=(int)0, scaled_proxy_height=(int)0, pitivi::title_safe_area_vertical=(double)0.80000000000000004, pitivi::title_safe_area_horizontal=(double)0.80000000000000004, pitivi::action_safe_area_vertical=(double)0.90000000000000002, pitivi::action_safe_area_horizontal=(double)0.90000000000000002, render-scale=(double)100, pitivi::project-id=(string)4afb34f82b754429846175fd45d05ab6, format-version=(string)0.7;'>
+    <encoding-profiles>
+      <encoding-profile name='pitivi-profile' description='Pitivi encoding profile' type='container' preset-name='webmmux' format='video/webm' >
+        <stream-profile parent='pitivi-profile' id='0' type='video' presence='0' format='video/x-vp8, profile=(string){ 0, 1, 2, 3 }' preset-name='vp8enc' restriction='video/x-raw, width=(int)720, height=(int)576, framerate=(fraction)25/1, pixel-aspect-ratio=(fraction)1/1' pass='0' variableframerate='0' />
+        <stream-profile parent='pitivi-profile' id='1' type='audio' presence='0' format='audio/x-vorbis, rate=(int)[ 1, 200000 ], channels=(int)[ 1, 255 ]' preset-name='vorbisenc' restriction='audio/x-raw, rate=(int)8000, channels=(int)1' />
+      </encoding-profile>
+      <encoding-profile name='MP4' description='bbb-render encoding profile' type='container' preset-name='mp4mux' format='video/quicktime, variant=(string)iso' >
+        <stream-profile parent='MP4' id='0' type='video' presence='0' format='video/x-h264, profile=(string)high' preset-name='x264enc' restriction='video/x-raw, framerate=(fraction)30/1, width=(int)1920, height=(int)1080, pixel-aspect-ratio=(fraction)1/1' pass='0' variableframerate='0' />
+        <stream-profile parent='MP4' id='1' type='audio' presence='0' format='audio/mpeg, mpegversion=(int)4, base-profile=(string)lc' preset-name='voaacenc' restriction='audio/x-raw, rate=(int)48000, channels=(int)2' />
+      </encoding-profile>
+    </encoding-profiles>
+    <ressources>
+      <asset id='file:///home/james/src/plug/video-assets/closing/plug-exit.svg' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)4;' metadatas='metadatas, file-size=(guint64)2635;' >
+        <stream-info id='9cbfa7d730ccfb43bad2e2697daaf8c14be0cdc2e488915e52b9dd92a667f09f' extractable-type-name='GESVideoUriSource' properties='properties, track-type=(int)4;' metadatas='metadatas;' caps='image/svg+xml'/>
+      </asset>
+    </ressources>
+    <timeline properties='properties, auto-transition=(boolean)true, snapping-distance=(guint64)13390297;' metadatas='metadatas, markers=(GESMarkerList)&quot;EMPTY&quot;, duration=(guint64)5000000000;'>
+      <track caps='video/x-raw(ANY)' track-type='4' track-id='0' properties='properties, message-forward=(boolean)true, restriction-caps=(string)&quot;video/x-raw\,\ width\=\(int\)1920\,\ height\=\(int\)1080\,\ framerate\=\(fraction\)30/1\,\ pixel-aspect-ratio\=\(fraction\)1/1&quot;, id=(string)3c5f9f52a0d4b3e7d88ea291258a9852;' metadatas='metadatas;'/>
+      <track caps='audio/x-raw(ANY)' track-type='2' track-id='1' properties='properties, message-forward=(boolean)true, restriction-caps=(string)&quot;audio/x-raw\,\ rate\=\(int\)48000\,\ channels\=\(int\)2&quot;, id=(string)1e7f92b007ac5f2e288e587da442aa05;' metadatas='metadatas;'/>
+      <layer priority='0' properties='properties, auto-transition=(boolean)true;' metadatas='metadatas, volume=(float)1, video::name=(string)&quot;Layer\ &quot;;'>
+        <clip id='0' asset-id='file:///home/james/src/plug/video-assets/closing/plug-exit.svg' type-name='GESUriClip' layer-priority='0' track-types='4' start='0' duration='5000000000' inpoint='0' rate='0' properties='properties, name=(string)uriclip1, is-image=(boolean)true;' metadatas='metadatas;'>
+          <source track-id='0' properties='properties, track-type=(int)4, has-internal-source=(boolean)true;'  children-properties='properties, GstFramePositioner::alpha=(double)1, GstFramePositioner::height=(int)3348, GstFramePositioner::posx=(int)-2016, GstFramePositioner::posy=(int)-1134, GstVideoDirection::video-direction=(int)8, GstFramePositioner::width=(int)5952;'>
+            <binding type='direct-absolute' source_type='interpolation' property='posy' mode='1' track_id='0' values =' 0:-4860  1000000000:0  5000000000:0 '/>
+            <binding type='direct-absolute' source_type='interpolation' property='width' mode='1' track_id='0' values =' 0:19200  1000000000:1920  5000000000:1920 '/>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  997826507:1  5000000000:1 '/>
+            <binding type='direct-absolute' source_type='interpolation' property='posx' mode='1' track_id='0' values =' 0:-8640  1000000000:0  5000000000:0 '/>
+            <binding type='direct-absolute' source_type='interpolation' property='height' mode='1' track_id='0' values =' 0:10800  1000000000:1080  5000000000:1080 '/>
+          </source>
+        </clip>
+      </layer>
+      <groups>
+      </groups>
+    </timeline>
+  </project>
+</ges>
